@@ -1,4 +1,3 @@
-import ApiPage from '../pages/apiPage.js';
 import HomePage from '../pages/homePage.js';
 
 describe ('Go to...', () => {
@@ -9,7 +8,7 @@ describe ('Go to...', () => {
 
 
     it('Should go to Api Page', () => {
-        const wdioUrl = 'http://webdriver.io/api.html'
+        const wdioUrl = 'http://webdriver.io/api.html';
 
         HomePage.goTo(HomePage.apiTab);
         
