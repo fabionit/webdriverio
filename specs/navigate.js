@@ -13,7 +13,7 @@ describe ('Go to...', () => {
         HomePage.goTo(HomePage.apiTab);
         
         let url = browser.getUrl();
-
+        //
         expect(url).to.equal(wdioUrl);
     });
 });
