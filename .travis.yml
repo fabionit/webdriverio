@@ -3,9 +3,7 @@ dist: trusty
 addons:
   apt:
     sources:
-      - google-chrome
-    packages:
-      - google-chrome-stable
+      - firefox
 
 language: node_js
 node_js:
@@ -17,6 +15,3 @@ branches:
 
 script:
 - npm install & npm test
-sudo: required
-addons:
-  chrome: stable
