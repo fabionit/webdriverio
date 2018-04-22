@@ -10,3 +10,6 @@ before_script:
 script:
   - sleep 5
   - npm test
+sudo: required
+addons:
+  chrome: stable
