@@ -10,8 +10,3 @@ before_script:
 script:
   - sleep 5
   - npm test
-
-addons:
-  sauce_connect:
-    username: "fabionit"
-    access_key: "ce71f4ac-f67a-4a0e-9183-6a14205535bf"
