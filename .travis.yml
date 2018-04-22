@@ -9,5 +9,5 @@ before_script:
 
 script:
   - sleep 5
-  - npm run test
+  - npm test
 
