@@ -5,19 +5,13 @@ node_js:
   - '6.10'
 
 before_script:
-- wget https://www.browserstack.com/browserstack-local/BrowserStackLocal-linux-x64.zip
-- unzip BrowserStackLocal-linux-x64.zip
-- ./BrowserStackLocal -v -onlyAutomate -forcelocal $BROWSERSTACK_ACCESS_KEY &
-- sleep 3
-- npm install
+  - npm install
 
 script:
   - sleep 5
   - npm test
 
-browserName: 'chrome',
-project: 'myApp',
-version: '59.0',
-build: 'myApp #' + process.env.TRAVIS_BUILD_NUMBER + '.' + process.env.TRAVIS_JOB_NUMBER,
-'browserstack.local': 'true',
-'browserstack.debug': 'true'
+addons:
+  sauce_connect:
+    username: "fabionit"
+    access_key: "ce71f4ac-f67a-4a0e-9183-6a14205535bf"
