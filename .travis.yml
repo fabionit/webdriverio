@@ -4,10 +4,11 @@ language: node_js
 node_js:
   - '6.10'
 
+before_script:
+  - npm install chromedriver
+
 script:
-- npm install
-  - sleep 5
-  - npm test
+- npm install & npm test
 sudo: required
 addons:
   chrome: stable
