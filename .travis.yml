@@ -9,7 +9,7 @@ before_script:
 
 script:
   - sleep 5
-  - npm run test:ci
+  - npm run test
 
 env:
   global:
