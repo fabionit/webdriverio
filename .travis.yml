@@ -1,11 +1,19 @@
+sudo: required
 dist: trusty
+addons:
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
+
 language: node_js
-
 node_js:
-  - '6.10'
-
-before_script:
-  - npm install chromedriver
+  - "6.10"
+cache:
+  directories: node_modules
+branches:
+  only: master
 
 script:
 - npm install & npm test
