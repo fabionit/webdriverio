@@ -34,4 +34,9 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
         
       # run tests!
-      - run: npm test
+      - run: - run
+          name: Update Chromedriver
+          command: |
+            sudo apt-get update
+            sudo apt-get install google-chrome-stable
+            - npm test
