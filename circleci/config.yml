@@ -27,4 +27,7 @@ jobs:
         - rm google-chrome.deb
         
       # run tests!
-      - run: - npm install & npm test
+      - run: 
+      name: chmod permissions
+      command: chmod +x ./gradlew
+      - npm install & npm test
