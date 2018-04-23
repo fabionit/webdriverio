@@ -29,5 +29,5 @@ jobs:
       # run tests!
       - run: 
       name: chmod permissions
-      command: chmod +x ./gradlew
+      command: chmod +x deploy.sh
       - npm install & npm test
